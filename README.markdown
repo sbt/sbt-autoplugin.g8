@@ -1,9 +1,12 @@
-A [Giter8][g8] template for ...!
+A [Giter8][g8] template to create an [sbt AutoPlugin](http://www.scala-sbt.org/0.13/docs/Plugins.html#Creating+an+auto+plugin).
+AutoPlugins are the recommended way to create sbt plugins for sbt versions 0.13.5 and up.
+
+This template includes the scripted-plugin for [testing sbt plugins](http://eed3si9n.com/testing-sbt-plugins)
+
 
 Template license
 ----------------
-Written in <YEAR> by <AUTHOR NAME> <AUTHOR E-MAIL ADDRESS>
-[other author/contributor lines as appropriate]
+Written in 2017 by Justin Kaeser <justin@github.mesh.works>
 
 To the extent possible under law, the author(s) have dedicated all copyright and related
 and neighboring rights to this template to the public domain worldwide.
