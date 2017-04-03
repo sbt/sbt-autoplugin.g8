@@ -1,6 +1,7 @@
 package $package$
 
-import sbt.{Keys, _}
+import sbt._
+import sbt.Keys._
 import sbt.plugins.JvmPlugin
 
 object $name;format="Camel"$Plugin extends AutoPlugin {
