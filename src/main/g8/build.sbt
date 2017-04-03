@@ -1,17 +1,18 @@
 
 name := """$name;format="norm"$"""
 organization := "$organization$"
-version := "$version$"
+version := "0.1-SNAPSHOT"
+
 scalaVersion := "$scala_version$"
 
 sbtPlugin := true
 
 libraryDependencies ++= Seq(
-  "org.scalactic" %% "scalactic" % "3.0.1",
+  "org.scalactic" %% "scalactic" % "3.0.1" % "test",
   "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 )
 
-initialCommands := """import $organization$.$name;format="lower,word"$._"""
+initialCommands in console := """import $package$._"""
 
 // set up 'scripted; sbt plugin for testing sbt plugins
 ScriptedPlugin.scriptedSettings
