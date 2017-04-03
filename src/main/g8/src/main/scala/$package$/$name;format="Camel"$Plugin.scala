@@ -3,21 +3,21 @@ package $package$
 import sbt.{Keys, _}
 import sbt.plugins.JvmPlugin
 
-object $name;format="Camel"$ extends AutoPlugin {
+object $name;format="Camel"$Plugin extends AutoPlugin {
 
   override def trigger = allRequirements
   override def requires = JvmPlugin
 
   object autoImport {
     val exampleSetting = settingKey[String]("A setting that is automatically imported to the build")
-    val exampleTask = settingKey[String]("A task that is automatically imported to the build")
+    val exampleTask = taskKey[String]("A task that is automatically imported to the build")
   }
 
   import autoImport._
 
   override lazy val projectSettings = Seq(
     exampleSetting := "just an example",
-    exampleTask := "computed from setting: " + exampleSetting.value
+    exampleTask := "computed from example setting: " + exampleSetting.value
   )
 
   override lazy val buildSettings = Seq()
