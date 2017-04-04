@@ -1,9 +1,11 @@
+package simple
+
 /**
   * A simple class and objects to write tests against.
   */
 class Main {
   val default = "the function returned"
-  def method = default + " " + function
+  def method = default + " " + Main.function
 }
 
 object Main {
