@@ -12,6 +12,9 @@ libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 )
 
+bintrayPackageLabels := Seq("sbt","plugin")
+bintrayVcsUrl := Some("""git@github.com:$organization$/$name;format="norm"$.git""")
+
 initialCommands in console := """import $package$._"""
 
 // set up 'scripted; sbt plugin for testing sbt plugins

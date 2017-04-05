@@ -5,8 +5,9 @@ AutoPlugins are the recommended way to create sbt plugins for sbt versions 0.13.
 
 1. [Install sbt 0.13.13 or higher](http://www.scala-sbt.org/release/docs/Setup.html)
 2. On the command line type:
-
-    sbt new sbt/sbt-autoplugin.g8
+   ```
+   sbt new sbt/sbt-autoplugin.g8
+   ```
 3. You will be prompted for a few basic settings for your project
 4. sbt will create a plugin project for you.
 
