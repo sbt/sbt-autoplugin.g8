@@ -21,3 +21,4 @@ Run `scripted` for [sbt script tests](http://www.scala-sbt.org/0.13/docs/Testing
 5. `sbt publish`
 6. [request inclusion in sbt-plugin-releases](https://bintray.com/sbt/sbt-plugin-releases)
 7. [Add your plugin to the community plugins list](https://github.com/sbt/website#attention-plugin-authors)
+8. [Claim your project an Scaladex](https://github.com/scalacenter/scaladex-contrib#claim-your-project)
