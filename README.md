@@ -1,9 +1,9 @@
-A [Giter8][g8] template to create an [sbt AutoPlugin](http://www.scala-sbt.org/0.13/docs/Plugins.html#Creating+an+auto+plugin).
-AutoPlugins are the recommended way to create sbt plugins for sbt versions 0.13.5 and up.
+A [Giter8][g8] template to create an [sbt AutoPlugin](http://www.scala-sbt.org/1.x/docs/Plugins.html#Creating+an+auto+plugin).
+AutoPlugins are the recommended way to create sbt plugins for sbt versions 0.13.5 and up. This template creates a plugin for sbt 1.x
 
 # Usage
 
-1. [Install sbt 0.13.13 or higher](http://www.scala-sbt.org/release/docs/Setup.html)
+1. [Install sbt 1.0.0 or higher](http://www.scala-sbt.org/release/docs/Setup.html)
 2. On the command line type:
    ```
    sbt new sbt/sbt-autoplugin.g8

@@ -1,3 +1,2 @@
-libraryDependencies += "org.scala-sbt" % "scripted-plugin" % sbtVersion.value
-
-addSbtPlugin("me.lessis" % "bintray-sbt" % "0.3.0")
+libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % sbtVersion.value
+addSbtPlugin("org.foundweekends" % "sbt-bintray" % "0.5.1")

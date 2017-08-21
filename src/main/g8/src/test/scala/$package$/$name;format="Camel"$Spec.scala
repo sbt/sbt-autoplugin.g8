@@ -1,11 +1,5 @@
 package $package$
 
-import org.scalatest.FlatSpec
-
-class $name;format="Camel"$Spec extends FlatSpec {
-
-  "an empty test" should "succeed" in { }
-
-  it should "succeed twice" in { }
-
+class $name;format="Camel"$Test {
+  // write tests with your preferred framework
 }

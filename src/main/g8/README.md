@@ -4,7 +4,7 @@ $purpose$
 
 ## Usage
 
-This plugin requires sbt 0.13.5+
+This plugin requires sbt 1.0.0+
 
 ### Testing
 
