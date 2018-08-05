@@ -24,7 +24,6 @@ bintrayVcsUrl := Some("""git@github.com:$organization$/$name;format="norm"$.git"
 
 initialCommands in console := """import $package$._"""
 
-enablePlugins(ScriptedPlugin)
 // set up 'scripted; sbt plugin for testing sbt plugins
 scriptedLaunchOpts ++=
   Seq("-Xmx1024M", "-Dplugin.version=" + version.value)
