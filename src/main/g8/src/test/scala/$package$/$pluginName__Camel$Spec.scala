@@ -1,5 +1,5 @@
 package $package$
 
-class $name;format="Camel"$Test {
+class $pluginName;format="Camel"$Test {
   // write tests with your preferred framework
 }
