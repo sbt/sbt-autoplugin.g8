@@ -1,6 +1,7 @@
 
 name := """$name;format="norm"$"""
 organization := "$organization$"
+organizationName := "$organizationName$"
 version := "0.1-SNAPSHOT"
 
 sbtPlugin := true
@@ -20,7 +21,7 @@ sbtPlugin := true
 //scalacOptions in Test ++= Seq("-Yrangepos")
 
 bintrayPackageLabels := Seq("sbt","plugin")
-bintrayVcsUrl := Some("""git@github.com:$organization$/$name;format="norm"$.git""")
+bintrayVcsUrl := Some("""git@github.com:$organizationName;format="word"$/$name;format="norm"$.git""")
 
 initialCommands in console := """import $package$._"""
 
