@@ -4,7 +4,7 @@ import sbt._
 import sbt.Keys._
 import sbt.plugins.JvmPlugin
 
-object $name;format="Camel"$Plugin extends AutoPlugin {
+object $pluginName;format="Camel"$Plugin extends AutoPlugin {
 
   override def trigger = allRequirements
   override def requires = JvmPlugin
