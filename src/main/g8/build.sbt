@@ -13,6 +13,7 @@ testFrameworks += new TestFramework("utest.runner.Framework")
 bintrayPackageLabels := Seq("sbt", "plugin")
 bintrayVcsUrl := Some("""git@github.com:$organizationName;format="word"$/$name;format="norm"$.git""")
 bintrayRepository := "sbt-plugins"
+bintrayOrganization := Some("$organizationName;format="lower"$")
 
 initialCommands in console := """import $package$._"""
 
