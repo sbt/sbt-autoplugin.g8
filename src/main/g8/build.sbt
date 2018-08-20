@@ -1,7 +1,6 @@
 name := """$name;format="norm"$"""
 organization := "$organization$"
 organizationName := "$organizationName$"
-version := "0.1-SNAPSHOT"
 
 sbtPlugin := true
 
