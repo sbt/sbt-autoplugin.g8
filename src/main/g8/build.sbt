@@ -1,4 +1,5 @@
 name := """$name;format="norm"$"""
+description := """$purpose$"""
 organization := "$organization$"
 organizationName := "$organizationName$"
 
