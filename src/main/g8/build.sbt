@@ -4,6 +4,7 @@ organization := "$organization$"
 organizationName := "$organizationName$"
 
 sbtPlugin := true
+publishMavenStyle := false
 
 libraryDependencies += "com.lihaoyi" %% "utest" % "$uTestVersion$" % Test
 testFrameworks += new TestFramework("utest.runner.Framework")
