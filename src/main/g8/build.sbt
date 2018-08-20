@@ -2,6 +2,7 @@ name := """$name;format="norm"$"""
 description := """$purpose$"""
 organization := "$organization$"
 organizationName := "$organizationName$"
+licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
 
 sbtPlugin := true
 publishMavenStyle := false
