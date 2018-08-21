@@ -1,27 +1,34 @@
 language: scala
 
-jdk:
-  - oraclejdk8
-
-script:
-  ## runs both regular tests and sbt-scripted integration tests
-  - sbt -Dfile.encoding=UTF8 test scripted
-
 sudo: false
 
-# https://docs.travis-ci.com/user/languages/java/
+jdk:
+- oraclejdk8
+
 addons:
   apt:
     packages:
-      - oracle-java8-installer
+    - oracle-java8-installer
+
+env:
+#- secure: "ENCRYPTEDSECRET"
+
+before_install:
+#- openssl aes-256-cbc -K $encrypted_4a09436dfeda_key -iv $encrypted_4a09436dfeda_iv -in travis/secring.asc.enc -out travis/secring.asc -d
+
+script:
+- sbt "^^$TRAVIS_SBT_VERSION" scripted
+
+after_success:
+- if [ "$TRAVIS_PULL_REQUEST" = 'false' ] && [ -n "$TRAVIS_TAG" ]; then
+  sbt "^^$TRAVIS_SBT_VERSION" publishSigned
+  fi
 
 before_cache:
-  # Tricks to avoid unnecessary cache updates
-  - find $HOME/.sbt -name "*.lock" | xargs rm
-  - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
+- find "$HOME/.ivy2/cache" -name "ivydata-*.properties" -print -delete
+- find "$HOME/.sbt"        -name "*.lock"               -print -delete
 
-# These directories are cached to S3 at the end of the build
 cache:
   directories:
-    - $HOME/.ivy2/cache
-    - $HOME/.sbt/boot/
+  - "$HOME/.ivy2/cache"
+  - "$HOME/.sbt/boot/"

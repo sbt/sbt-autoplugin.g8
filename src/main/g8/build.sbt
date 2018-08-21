@@ -23,3 +23,7 @@ scriptedLaunchOpts ++= Seq(
   "-Xmx1024M",
   "-Dplugin.version=" + version.value
 )
+
+pgpPublicRing := file("./travis/pubring.asc")
+pgpSecretRing := file("./travis/secring.asc")
+pgpPassphrase := sys.env.get("PGP_PASS").map(_.toArray)

@@ -12,6 +12,25 @@ Run `test` for regular unit tests.
 
 Run `scripted` for [sbt script tests](http://www.scala-sbt.org/1.x/docs/Testing-sbt-plugins.html).
 
+### PGP Keys
+
+1. Follow the instructions on [Creating a Key Pair](https://www.scala-sbt.org/sbt-pgp/usage.html) with the sbt-pgp plugin.
+1. Go to Github and create a Personal access token with the scopes listed on
+[Travis CI for Open Source Projects](https://docs.travis-ci.com/user/github-oauth-scopes/#travis-ci-for-open-source-projects).
+   * Don't forget to copy it!
+1. Next encrypt the PGP private key using the instructions on [Encrypting Files](https://docs.travis-ci.com/user/encrypting-files/).
+   1. `gem install travis`
+   1. `travis login -g YOUR_GITHUB_TOKEN`
+   1. `travis encrypt-file ~/.sbt/gpg/secring.asc --add --decrypt-to travis/secring.asc`
+1. Move the files:
+   1. `mkdir travis`
+   1. `cp ~/.sbt/gpg/pubring.asc travis/`
+   1. `mv secring.asc.enc travis/`
+1. Now encrypt the PGP passphrase using the instructions on [Encryption Keys](https://docs.travis-ci.com/user/encryption-keys/).
+   1. `travis encrypt --add`
+   1. At the prompt: `PGP_PASS=YOUR_PGP_PASSPHRASE`
+1. Tidy up the `.travis.yml` file. Also fix the `secring.asc.enc`.
+
 ### Publishing
 
 1. publish your source to GitHub

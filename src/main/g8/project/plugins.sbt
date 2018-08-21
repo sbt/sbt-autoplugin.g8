@@ -4,3 +4,4 @@ addSbtPlugin("org.foundweekends" % "sbt-bintray" % $bintrayVersion$)
 
 addSbtPlugin("com.dwijnand" % "sbt-dynver" % $dynverVersion$)
 
+addSbtPlugin("com.jsuereth" % "sbt-pgp" % $pgpVersion$)
