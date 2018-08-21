@@ -1,4 +1,4 @@
-name := """$name;format="norm"$"""
+name := "$name;format="norm"$"
 description := """$purpose$"""
 organization := "$organization$"
 organizationName := "$organizationName$"
@@ -11,11 +11,11 @@ libraryDependencies += "com.lihaoyi" %% "utest" % "$uTestVersion$" % Test
 testFrameworks += new TestFramework("utest.runner.Framework")
 
 bintrayPackageLabels := Seq("sbt", "plugin")
-bintrayVcsUrl := Some("""git@github.com:$organizationName;format="word"$/$name;format="norm"$.git""")
+bintrayVcsUrl := Some("git@github.com:$organizationName;format="word"$/$name;format="norm"$.git")
 bintrayRepository := "sbt-plugins"
 bintrayOrganization := Some("$organizationName;format="lower"$")
 
-initialCommands in console := """import $package$._"""
+initialCommands in console := "import $package$._"
 
 enablePlugins(ScriptedPlugin)
 scriptedLaunchOpts ++= Seq(
