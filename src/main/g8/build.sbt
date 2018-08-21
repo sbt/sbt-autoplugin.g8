@@ -2,6 +2,7 @@ name := "$name;format="norm"$"
 description := """$purpose$"""
 organization := "$organization$"
 organizationName := "$organizationName$"
+homepage := Some(url("https://github.com/$organizationName;format="word"$/$name;format="norm"$"))
 licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
 
 scalaVersion := "$scalaVersion$"
