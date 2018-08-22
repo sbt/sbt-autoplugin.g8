@@ -23,8 +23,8 @@ script:
 
 after_success:
 - if [ "$TRAVIS_PULL_REQUEST" = 'false' ] && [ -n "$TRAVIS_TAG" ]; then
-  sbt publishSigned githubRelease
-  fi
+  sbt publishSigned githubRelease;
+  fi;
 
 before_cache:
 - find "$HOME/.ivy2/cache" -name "ivydata-*.properties" -print -delete
