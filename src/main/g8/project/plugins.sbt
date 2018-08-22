@@ -1,7 +1,9 @@
 libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % sbtVersion.value
 
-addSbtPlugin("org.foundweekends" % "sbt-bintray" % $bintrayVersion$)
+addSbtPlugin("org.foundweekends" % "sbt-bintray" % "$bintrayVersion$")
 
-addSbtPlugin("com.dwijnand" % "sbt-dynver" % $dynverVersion$)
+addSbtPlugin("ohnosequences" % "sbt-github-release" % "$githubReleaseVersion$")
 
-addSbtPlugin("com.jsuereth" % "sbt-pgp" % $pgpVersion$)
+addSbtPlugin("com.dwijnand" % "sbt-dynver" % "$dynverVersion$")
+
+addSbtPlugin("com.jsuereth" % "sbt-pgp" % "$pgpVersion$")

@@ -8,13 +8,9 @@ licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html
 scalaVersion := "$scalaVersion$"
 
 sbtPlugin := true
-publishMavenStyle := false
 
 libraryDependencies += "com.lihaoyi" %% "utest" % "$uTestVersion$" % Test
 testFrameworks += new TestFramework("utest.runner.Framework")
-
-bintrayOrganization := Some("$organizationName;format="lower"$")
-bintrayPackageLabels := Seq("sbt", "plugin")
 
 enablePlugins(ScriptedPlugin)
 scriptedLaunchOpts ++= Seq(
@@ -22,6 +18,14 @@ scriptedLaunchOpts ++= Seq(
   "-Dplugin.version=" + version.value
 )
 
+publishMavenStyle := false
+
 pgpPublicRing := file("./travis/pubring.asc")
 pgpSecretRing := file("./travis/secring.asc")
 pgpPassphrase := sys.env.get("PGP_PASS").map(_.toArray)
+
+bintrayOrganization := Some("$organizationName;format="lower"$")
+bintrayPackageLabels := Seq("sbt", "plugin")
+
+ghreleaseRepoOrg := organizationName.value
+ghreleaseAssets := PgpKeys.signedArtifacts.value.values.toSeq
