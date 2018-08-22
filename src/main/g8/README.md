@@ -1,5 +1,7 @@
 # $name$
 
+[![Build Status](https://travis-ci.org/$organizationName;format="word"$/$name;format="word"$.svg?branch=master)](https://travis-ci.org/$organizationName;format="word"$/$name;format="word"$)
+
 $purpose$
 
 ## Usage
