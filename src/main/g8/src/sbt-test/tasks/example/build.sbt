@@ -1,4 +1,4 @@
-scalaVersion := $scalaVersion$
+scalaVersion := "$scalaVersion$"
 
 TaskKey[Unit]("check") := {
   val example = exampleTask.value
