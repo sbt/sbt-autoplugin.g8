@@ -1,6 +1,7 @@
 # $name$
 
-[![Build Status](https://travis-ci.org/$organizationName;format="word"$/$name;format="word"$.svg?branch=master)](https://travis-ci.org/$organizationName;format="word"$/$name;format="word"$)
+[![Build Status](https://travis-ci.org/$organizationName;format="word"$/$name$.svg?branch=master)](https://travis-ci.org/$organizationName;format="word"$/$name$)
+[![Download](https://api.bintray.com/packages/$organizationName;format="word,lower"$/sbt-plugins/$name$/images/download.svg) ](https://bintray.com/$organizationName;format="word,lower"$/sbt-plugins/$name$/_latestVersion)
 
 $purpose$
 
