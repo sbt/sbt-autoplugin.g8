@@ -24,7 +24,7 @@ before_deploy:
 
 deploy:
   provider: script
-  script: sbt publishSigned githubRelease
+  script: sbt publish githubRelease
   on:
     tags: true
     branch: master
