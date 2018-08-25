@@ -15,6 +15,15 @@ Run `test` for regular unit tests.
 
 Run `scripted` for [sbt script tests](http://www.scala-sbt.org/1.x/docs/Testing-sbt-plugins.html).
 
+### Versioning
+
+Version numbers are determined automatically using [sbt-dynver](https://github.com/dwijnand/sbt-dynver).
+
+To create a new version add a new git annotated tag:
+```bash
+git tag -a v1.1.0
+```
+
 ### Publishing
 
 #### Signed Artifacts
