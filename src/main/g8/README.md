@@ -138,3 +138,7 @@ Add the output to the `env.global` section of the `.travis.yml` file.
 6. [request inclusion in sbt-plugin-releases](https://bintray.com/sbt/sbt-plugin-releases)
 7. [Add your plugin to the community plugins list](https://github.com/sbt/website#attention-plugin-authors)
 8. [Claim your project an Scaladex](https://github.com/scalacenter/scaladex-contrib#claim-your-project)
+
+## Credits
+
+This plugin was generated from the [BotTech/sbt-autoplugin.g8](https://github.com/BotTech/sbt-autoplugin.g8) Giter8 template.
