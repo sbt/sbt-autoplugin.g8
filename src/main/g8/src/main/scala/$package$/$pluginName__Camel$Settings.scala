@@ -7,8 +7,8 @@ import sbt._
 object $pluginName;format="Camel"$Settings {
 
   val rawSettings = Seq(
-    exampleSetting := exampleSettingImpl.value,
-    exampleTask := exampleTaskImpl.value
+    $pluginName;format="camel"$ExampleSetting := exampleSettingImpl.value,
+    $pluginName;format="camel"$ExampleTask := exampleTaskImpl.value
   )
 
   def exampleSettingImpl = Def.setting {
