@@ -6,10 +6,6 @@ test in Test := {
   val _ = (g8Test in Test).toTask("").value
 }
 
-//lazy val addDependencyCheckPlugin = taskKey[Unit]("Adds the dependency check plugin.")
-//
-//scriptedDependencies := Def.sequential(scriptedDependencies)
-
 lazy val g8TestDirectory = settingKey[File]("The directory containing the g8 test.")
 g8TestDirectory := (Test / sourceDirectory).value / "g8"
 Compile / g8 / unmanagedSourceDirectories += g8TestDirectory.value

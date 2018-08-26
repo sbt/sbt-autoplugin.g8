@@ -1,0 +1,20 @@
+.git
+giter8.sbt
+project/giter8.sbt
+g8.sbt
+project/g8.sbt
+activator.properties
+project/activator.properties
+template.properties
+project/template.properties
+# Don't ignore sbt-scripted test files. See https://github.com/foundweekends/giter8/issues/394.
+#test
+!test/
+project/test
+!project/test/
+giter8.test
+project/giter8.test
+g8.test
+project/g8.test
+target/
+**/target/
