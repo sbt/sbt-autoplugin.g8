@@ -1,25 +1,48 @@
-A [Giter8][g8] template to create an [sbt AutoPlugin](http://www.scala-sbt.org/1.x/docs/Plugins.html#Creating+an+auto+plugin).
-AutoPlugins are the recommended way to create sbt plugins for sbt versions 0.13.5 and up. This template creates a plugin for sbt 1.x
+# sbt-autoplugin.g8
 
-# Usage
+A [Giter8][g8] template to create an [sbt AutoPlugin][sbt AutoPlugin].
 
-1. [Install sbt 1.0.0 or higher](http://www.scala-sbt.org/release/docs/Setup.html)
-2. On the command line type:
+AutoPlugins are the recommended way to create sbt plugins for sbt versions 0.13.5 and up. This template creates a plugin
+for sbt 1.x
+
+The original [sbt/sbt-autoplugin.g8][Original Repo] template was intended to contain the minimum amount to get started.
+This fork is more comprehensive and opinionated, with the aim of requiring the minimum amount of configuration to get
+the plugin published.
+
+## Plugins
+
+The generated project uses the following sbt plugins:
+* [sbt-dynver][sbt-dynver] - dynamically determines version numbers from git tags.
+* [sbt-pgp][sbt-pgp] - signs artifacts with GPG.
+* [sbt-bintray][sbt-bintray] - publishes releases to Bintray.
+* [sbt-github-release][sbt-github-release] - publishes releases to GitHub.
+
+## Usage
+
+1. [Install sbt 1.0.0 or higher][sbt Setup]
+1. On the command line type:
+   ```bash
+   sbt new BotTech/sbt-autoplugin.g8
    ```
-   sbt new sbt/sbt-autoplugin.g8
-   ```
-3. You will be prompted for a few basic settings for your project
-4. sbt will create a plugin project for you.
+1. You will be prompted for a few basic settings for your project.
+1. sbt will create a plugin project for you.
+1. Take a look at the project README.md.
 
-This template includes the scripted-plugin for [testing sbt plugins](http://www.scala-sbt.org/0.13/docs/Testing-sbt-plugins.html)
+## Credits
 
+Special thanks to:
+* [GitHub][Github] for hosting the git repository.
+* [Travis CI][Travis CI] for running the build.
+* All the other OSS contributors who made this project possible.
 
-Template license
-----------------
-Written in 2017 by Justin Kaeser <justin@github.mesh.works>
-
-To the extent possible under law, the author(s) have dedicated all copyright and related
-and neighboring rights to this template to the public domain worldwide.
-This template is distributed without any warranty. See <http://creativecommons.org/publicdomain/zero/1.0/>.
-
-[g8]: http://www.foundweekends.org/giter8/
+[sbt AutoPlugin]: http://www.scala-sbt.org/1.x/docs/Plugins.html#Creating+an+auto+plugin
+[g8]: http://www.foundweekends.org/giter8
+[Github]: https://github.com
+[Original Repo]: https://github.com/sbt/sbt-autoplugin.g8
+[sbt Setup]: http://www.scala-sbt.org/release/docs/Setup.html
+[sbt-bintray]: https://github.com/sbt/sbt-bintray
+[sbt-dynver]: https://github.com/dwijnand/sbt-dynver
+[sbt-github-release]: https://github.com/ohnosequences/sbt-github-release
+[sbt-pgp]: https://github.com/sbt/sbt-pgp
+[Testing Plugins]: http://www.scala-sbt.org/0.13/docs/Testing-sbt-plugins.html
+[Travis CI]: https://travis-ci.org

@@ -17,7 +17,7 @@ env:
   # Bintray Username and API Key
   #- BINTRAY_USER=YOUR_BINTRAY_USER
   #- secure: "ENCRYPTED_BINTRAY_API_KEY"
-  # Github Token
+  # GitHub Token
   #- secure: "ENCRYPTED_GITHUB_TOKEN"
 
 script: sbt scripted
