@@ -13,7 +13,6 @@ the plugin published.
 
 The generated project uses the following sbt plugins:
 * [sbt-dynver][sbt-dynver] - dynamically determines version numbers from git tags.
-* [sbt-pgp][sbt-pgp] - signs artifacts with GPG.
 * [sbt-bintray][sbt-bintray] - publishes releases to Bintray.
 * [sbt-github-release][sbt-github-release] - publishes releases to GitHub.
 
