@@ -1,5 +1,7 @@
 # sbt-autoplugin.g8
 
+[![Build Status][Build Status]](https://travis-ci.org/BotTech/sbt-cached-updates)
+
 A [Giter8][g8] template to create an [sbt AutoPlugin][sbt AutoPlugin].
 
 AutoPlugins are the recommended way to create sbt plugins for sbt versions 0.13.5 and up. This template creates a plugin
@@ -34,10 +36,11 @@ Special thanks to:
 * [Travis CI][Travis CI] for running the build.
 * All the other OSS contributors who made this project possible.
 
-[sbt AutoPlugin]: http://www.scala-sbt.org/1.x/docs/Plugins.html#Creating+an+auto+plugin
+[Build Status]: https://travis-ci.org/BotTech/sbt-gpg.svg?branch=master
 [g8]: http://www.foundweekends.org/giter8
 [Github]: https://github.com
 [Original Repo]: https://github.com/sbt/sbt-autoplugin.g8
+[sbt AutoPlugin]: http://www.scala-sbt.org/1.x/docs/Plugins.html#Creating+an+auto+plugin
 [sbt Setup]: http://www.scala-sbt.org/release/docs/Setup.html
 [sbt-bintray]: https://github.com/sbt/sbt-bintray
 [sbt-dynver]: https://github.com/dwijnand/sbt-dynver
