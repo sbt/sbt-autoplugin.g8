@@ -24,6 +24,13 @@ To create a new version add a new git annotated tag:
 git tag -a v1.1.0
 ```
 
+### Continuous Integration
+
+Continuous integration builds are done with Travis CI.
+
+Head over to your [organization profile][Travis Profile] and enable the build on this project. You may need to sync the
+account if the project does not appear in the list.
+
 ### Publishing
 
 The Travis CI build will automatically publish to Bintray and GitHub for all tagged commits on master.
@@ -176,3 +183,4 @@ Special thanks to:
 [Travis Encryption Keys]: https://docs.travis-ci.com/user/encryption-keys
 [Travis OAuth]: https://docs.travis-ci.com/user/deployment/releases/#authenticating-with-an-oauth-token
 [Travis OSS]: https://docs.travis-ci.com/user/github-oauth-scopes/#travis-ci-for-open-source-projects
+[Travis Profile]: https://travis-ci.org/profile/$organizationName$
