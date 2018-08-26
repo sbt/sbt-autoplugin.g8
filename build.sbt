@@ -1,13 +1,21 @@
-// This build is for this Giter8 template.
-// To test the template run `g8` or `g8Test` from the sbt session.
-// See http://www.foundweekends.org/giter8/testing.html#Using+the+Giter8Plugin for more details.
-lazy val root = project.in(file("."))
-  .enablePlugins(ScriptedPlugin)
-  .settings(
-    name := "sbt-autoplugin.g8",
-    test in Test := {
-      val _ = (g8Test in Test).toTask("").value
-    },
-    scriptedLaunchOpts ++= List("-Xms1024m", "-Xmx1024m", "-XX:ReservedCodeCacheSize=128m", "-XX:MaxPermSize=256m", "-Xss2m", "-Dfile.encoding=UTF-8"),
-    resolvers += Resolver.url("typesafe", url("http://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
-  )
+enablePlugins(ScriptedPlugin)
+
+name := "sbt-autoplugin.g8"
+
+test in Test := {
+  val _ = (g8Test in Test).toTask("").value
+}
+
+//lazy val addDependencyCheckPlugin = taskKey[Unit]("Adds the dependency check plugin.")
+//
+//scriptedDependencies := Def.sequential(scriptedDependencies)
+
+lazy val g8TestDirectory = settingKey[File]("The directory containing the g8 test.")
+g8TestDirectory := (Test / sourceDirectory).value / "g8"
+Compile / g8 / unmanagedSourceDirectories += g8TestDirectory.value
+Compile / g8 / sources ++= {
+  val dir = g8TestDirectory.value
+  sbt.Path.allSubpaths(dir).collect {
+    case (f, _) if f.isFile => f
+  }.toSeq
+}
