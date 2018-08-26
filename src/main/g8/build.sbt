@@ -20,13 +20,7 @@ scriptedLaunchOpts ++= Seq(
 
 publishMavenStyle := false
 
-pgpPublicRing := file("./travis/pubring.asc")
-pgpSecretRing := file("./travis/secring.asc")
-pgpPassphrase := sys.env.get("PGP_PASS").map(_.toArray)
-publish / packagedArtifacts := PgpKeys.signedArtifacts.value
-
 bintrayOrganization := Some("$organizationName;format="lower"$")
 bintrayPackageLabels := Seq("sbt", "plugin")
 
 ghreleaseRepoOrg := organizationName.value
-ghreleaseAssets := (publish / packagedArtifacts).value.values.toSeq

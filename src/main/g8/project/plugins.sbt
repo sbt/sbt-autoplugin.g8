@@ -4,4 +4,3 @@ addSbtPlugin("ohnosequences" % "sbt-github-release" % "$githubReleaseVersion$")
 
 addSbtPlugin("com.dwijnand" % "sbt-dynver" % "$dynverVersion$")
 
-addSbtPlugin("com.jsuereth" % "sbt-pgp" % "$pgpVersion$")
