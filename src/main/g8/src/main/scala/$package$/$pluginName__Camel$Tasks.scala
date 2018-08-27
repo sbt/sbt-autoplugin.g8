@@ -5,7 +5,7 @@ import sbt._
 
 object $pluginName;format="Camel"$Tasks {
 
-  def exampleTaskImpl = Def.task {
+  def exampleTask = Def.task {
     "computed from example setting: " + $pluginName;format="camel"$ExampleSetting.value
   }
 }

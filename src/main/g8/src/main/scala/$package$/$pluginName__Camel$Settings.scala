@@ -7,11 +7,11 @@ import sbt._
 object $pluginName;format="Camel"$Settings {
 
   val rawSettings = Seq(
-    $pluginName;format="camel"$ExampleSetting := exampleSettingImpl.value,
-    $pluginName;format="camel"$ExampleTask := exampleTaskImpl.value
+    $pluginName;format="camel"$ExampleSetting := exampleSetting.value,
+    $pluginName;format="camel"$ExampleTask := exampleTask.value
   )
 
-  def exampleSettingImpl = Def.setting {
+  def exampleSetting = Def.setting {
     "just an example"
   }
 }
