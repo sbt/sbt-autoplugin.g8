@@ -5,3 +5,5 @@
                                   |Specify this property using the scriptedLaunchOpts -D.""".stripMargin)
   else addSbtPlugin("$organization$" % """$name;format="norm"$""" % pluginVersion)
 }
+
+libraryDependencies += "org.scalactic" %% "scalactic" % "$scalacticVersion$"
