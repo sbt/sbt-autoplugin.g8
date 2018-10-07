@@ -26,14 +26,15 @@ git tag -a v1.1.0
 
 ### Continuous Integration
 
-Continuous integration builds are done with Travis CI.
+Continuous integration builds are done with [Travis CI][Travis CI].
 
 Head over to your [organization profile][Travis Profile] and enable the build on this project. You may need to sync the
 account if the project does not appear in the list.
 
 ### Publishing
 
-The Travis CI build will automatically publish to Bintray and GitHub for all tagged commits on master.
+The Travis CI build will automatically publish to [Bintray][Bintray] and [GitHub][Github] for all tagged commits on
+master.
 
 #### Signed Artifacts
 
@@ -116,7 +117,7 @@ Add a new repository:
 
 ##### Encrypt Bintray Credentials
 
-Go to your profile on [Bintray][Bintray] and copy your API key and encrypt it.
+Go to your profile on Bintray and copy your API key and encrypt it.
 ```bash
 travis encrypt
 BINTRAY_PASS=YOUR_PGP_PASSPHRASE
@@ -147,7 +148,7 @@ Add the output to the `env.global` section of the `.travis.yml` file.
 1. Include your plugin in the [community sbt repository][Community Repo].
 1. Add your plugin to the [community plugins list][Community Plugins].
 1. Add your plugin to the [Awesome Scala][Awesome Scala] list.
-1. [Claim your project][Scaladex] in the Scaladex.
+1. [Claim your project][Scaladex Claim Your Project] in the Scaladex.
 
 ## Credits
 
@@ -155,9 +156,10 @@ This plugin was generated from the [BotTech/sbt-autoplugin.g8][sbt-autoplugin] G
 
 Special thanks to:
 * [GitHub][Github] for hosting the git repository.
-* [Travis CI][Travis CI] for running the build.
 * [JFrog][JFrog] for distributing the releases on Bintray.
-* [Lightbend][Lightbend] for distributing the plugin in the community sbt repository.
+* [Lightbend][Lightbend] for [Scala][Scala], [sbt][sbt] and distributing the plugin in the community sbt repository.
+* [scalacenter][scalacenter] for [Scala][Scala] and indexing this project in the [Scaladex][Scaladex].
+* [Travis CI][Travis CI] for running the build.
 * All the other OSS contributors who made this project possible.
 
 [Awesome Scala]: https://github.com/lauris/awesome-scala
@@ -171,12 +173,16 @@ Special thanks to:
 [Github]: https://github.com
 [JFrog]: https://jfrog.com
 [Lightbend]: https://www.lightbend.com
+[sbt]: https://www.scala-sbt.org
 [sbt-autoplugin]: https://github.com/BotTech/sbt-autoplugin.g8
 [sbt-bintray]: https://github.com/sbt/sbt-bintray
 [sbt-dynver]: https://github.com/dwijnand/sbt-dynver
 [sbt-github-release]: https://github.com/ohnosequences/sbt-github-release
 [sbt-pgp]: https://github.com/sbt/sbt-pgp
-[Scaladex]: https://github.com/scalacenter/scaladex-contrib#claim-your-project
+[Scala]: https://www.scala-lang.org
+[scalacenter]: https://scala.epfl.ch
+[Scaladex]: https://index.scala-lang.org
+[Scaladex Claim You Project]: https://github.com/scalacenter/scaladex-contrib#claim-your-project
 [Testing Plugins]: http://www.scala-sbt.org/1.x/docs/Testing-sbt-plugins.html
 [Travis CI]: https://travis-ci.org
 [Travis Encrypting Files]: https://docs.travis-ci.com/user/encrypting-files
