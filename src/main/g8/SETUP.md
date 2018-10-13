@@ -13,7 +13,7 @@ account if the project does not appear in the list.
 
 ##### Create a GPG Key
 
-Follow the instructions on [creating a key pair][Create GPG Key] with the sbt-pgp plugin.
+Follow the instructions on [sbt-gpg - Travis CI] with the [BotTech/sbt-gpg] plugin.
 
 ```sbtshell
 set pgpReadOnly := false
@@ -89,7 +89,7 @@ Add a new repository:
 Go to your profile on Bintray and copy your API key and encrypt it.
 ```bash
 travis encrypt
-BINTRAY_PASS=YOUR_PGP_PASSPHRASE
+BINTRAY_PASS=YOUR_BINTRAY_API_KEY
 ```
 
 Add the output to the `env.global` section of the `.travis.yml` file.
@@ -121,9 +121,11 @@ Add the output to the `env.global` section of the `.travis.yml` file.
 
 [Awesome Scala]: https://github.com/lauris/awesome-scala
 [Bintray OSS Signup]: https://bintray.com/signup/oss
+[BotTech/sbt-gpg]: https://github.com/BotTech/sbt-gpg
 [Community Plugins]: https://github.com/sbt/website#attention-plugin-authors
 [Community Repo]: https://www.scala-sbt.org/1.x/docs/Bintray-For-Plugins.html#Linking+your+package+to+the+sbt+organization
 [Create GPG Key]: https://www.scala-sbt.org/sbt-pgp/usage.html
+[sbt-gpg - Travis CI]: https://github.com/BotTech/sbt-gpg#travis-ci
 [sbt-github-release]: https://github.com/ohnosequences/sbt-github-release
 [Scaladex Claim You Project]: https://github.com/scalacenter/scaladex-contrib#claim-your-project
 [Travis CI]: https://travis-ci.org
