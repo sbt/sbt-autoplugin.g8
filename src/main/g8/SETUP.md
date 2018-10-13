@@ -55,7 +55,11 @@ Encrypt the secret key:
 travis encrypt-file travis/secring.asc
 ```
 
-Add the output to the `env.global` section of the `.travis.yml` file.
+Add the output to the `before_deploy` section of the `.travis.yml` file. For example:
+```yaml
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_12345abcdef -iv $encrypted_12345abcdef -in key.asc.enc -out temp/target/.gnupg/key.asc -d
+```
 
 Move the encrypted secret key:
 ```bash
