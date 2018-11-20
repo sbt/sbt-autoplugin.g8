@@ -1,6 +1,6 @@
 # sbt-autoplugin.g8
 
-[![Build Status]](https://travis-ci.org/BotTech/sbt-cached-updates)
+[![Build Status]](https://travis-ci.org/BotTech/sbt-autoplugin)
 
 A [Giter8][g8] template to create an [sbt AutoPlugin].
 
