@@ -117,6 +117,10 @@ GITHUB_TOKEN=YOUR_GITHUB_TOKEN
 
 Add the output to the `env.global` section of the `.travis.yml` file.
 
+#### Signing
+
+Follow the instructions on [BotTech/sbt-gpg][BotTech/sbt-gpg Travis CI] to setup the GnuPG key and passphrase.
+
 #### Promote Your Plugin
 
 1. Include your plugin in the [community sbt repository][Community Repo].
@@ -127,6 +131,7 @@ Add the output to the `env.global` section of the `.travis.yml` file.
 [Awesome Scala]: https://github.com/lauris/awesome-scala
 [Bintray OSS Signup]: https://bintray.com/signup/oss
 [BotTech/sbt-gpg]: https://github.com/BotTech/sbt-gpg
+[BotTech/sbt-gpg Travis CI]: https://github.com/BotTech/sbt-gpg#travis-ci
 [Community Plugins]: https://github.com/sbt/website#attention-plugin-authors
 [Community Repo]: https://www.scala-sbt.org/1.x/docs/Bintray-For-Plugins.html#Linking+your+package+to+the+sbt+organization
 [Create GPG Key]: https://www.scala-sbt.org/sbt-pgp/usage.html

@@ -22,15 +22,19 @@ env:
 
 script: sbt scripted
 
-before_deploy:
-#- openssl aes-256-cbc -K $encrypted_4a09436dfeda_key -iv $encrypted_4a09436dfeda_iv -in travis/secring.asc.enc -out travis/secring.asc -d
-
-deploy:
-  provider: script
-  script: sbt publish githubRelease
-  on:
-    tags: true
-    branch: master
+jobs:
+  include:
+  - stage: publish
+    script: skip
+    before_deploy:
+    #- openssl aes-256-cbc -K $encrypted_4a09436dfeda_key -iv $encrypted_4a09436dfeda_iv -in travis/key.asc.enc -out travis/key.asc -d
+    deploy:
+      provider: script
+      script: sbt gpgImportKey publish githubRelease
+      skip_cleanup: true
+      on:
+        tags: true
+        branch: master
 
 before_cache:
 - find "$HOME/.ivy2/cache" -name "ivydata-*.properties" -print -delete
