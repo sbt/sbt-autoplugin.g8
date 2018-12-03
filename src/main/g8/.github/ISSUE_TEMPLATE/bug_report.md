@@ -18,12 +18,14 @@ sbt | 1.2.1 (`grep "sbt.version" project/build.properties`)
 
 **Steps To Reproduce**
 Steps to reproduce the behaviour:
-1. Generate a new sbt project using:
-```sbtshell
-sbt new BotTech/sbt-autoplugin.g8
+1. Use the following `build.sbt` file:
+```sbt
+TODO
 ```
-2. Use the default answers for each question.
-3. TODO
+2. Run:
+```sbtshell
+sbt myTask
+```
 
 **Expected Behaviour**
 A clear and concise description of what you expected to happen.
