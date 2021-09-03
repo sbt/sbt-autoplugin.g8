@@ -21,7 +21,7 @@ sbtPlugin := true
 
 inThisBuild(List(
   organization := "$organization$",
-  homepage := Some(url($homePageUrl$)),
+  homepage := Some(url("$homePageUrl$")),
   licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
   developers := List(
     Developer(
