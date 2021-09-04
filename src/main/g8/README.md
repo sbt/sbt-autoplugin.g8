@@ -12,6 +12,10 @@ Run `test` for regular unit tests.
 
 Run `scripted` for [sbt script tests](http://www.scala-sbt.org/1.x/docs/Testing-sbt-plugins.html).
 
+### CI
+
+The generated project uses [sbt-github-actions](https://github.com/djspiewak/sbt-github-actions) as a plugin to generate workflows for GitHub actions. For full details of how to use it [read this](https://github.com/djspiewak/sbt-github-actions/blob/main/README.md)
+
 ### Publishing
 
 1. publish your source to GitHub
