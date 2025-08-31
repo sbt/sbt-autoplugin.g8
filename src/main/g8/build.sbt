@@ -17,7 +17,7 @@ sbtPlugin := true
 
 // Specs2
 //libraryDependencies ++= Seq("org.specs2" %% "specs2-core" % "4.12.8" % "test")
-//scalacOptions in Test ++= Seq("-Yrangepos")
+//Test / scalacOptions ++= Seq("-Yrangepos")
 
 inThisBuild(List(
   organization := "$organization$",
@@ -33,7 +33,7 @@ inThisBuild(List(
   )
 ))
 
-initialCommands in console := """import $package$._"""
+console / initialCommands := """import $package$._"""
 
 enablePlugins(ScriptedPlugin)
 // set up 'scripted; sbt plugin for testing sbt plugins
